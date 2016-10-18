@@ -1,0 +1,91 @@
+////////////////////
+/// Example      ///=============================================================================---___
+/// Program      ///--------------------------------------------------------------------------------------
+////////////////////
+
+Try running this code in the HTML textArea!
+
+
+EXAMPLE ONE
+---
+new Operator take:
+	return (v1+1),(v2-1);
+
+new Vertex a,b: 10
+new Edge ab: a,b
+
+set Operator ab: take
+
+step 0
+step 1
+step 1
+step 2
+
+EXAMPLE TWO
+---
+default ordering: seq
+
+new operator take:
+	return (v1+1),(v2-1);
+new operator takeHalf:
+	return (v1+(v2/2)),(v2/2);
+
+new Vertex a,b,c: 10
+new Edge ab: a,b
+new Edge bc: b,c
+new Edge ca: c,a
+
+set operator ab: take
+set operator bc: takeHalf
+set operator ca: take
+set priority ab: 1
+
+step 0
+step 1
+step 1
+step 1
+step 1
+step 1
+step 45
+step 1
+step 1
+step 1
+step 1
+step 1
+
+EXAMPLE THREE
+---
+
+new operator takeThree:
+	return (v1+3),(v2-3);
+new Operator takeHalf:
+	return (v1+(v2/2)),(v2/2);
+
+new Vertex source: 10
+new Vertex p1,p1a,p1b,p2,p2a,p2b: 6
+
+default ordering: rand
+default operator: takeThree
+new Edge A: source,p1
+new Edge B: source,p2
+
+default ordering: small
+default operator: takeHalf
+new Edge A1: p1,p1a
+new Edge A2: p1,p1b
+new Edge B1: p2,p2a
+new Edge B2: p2,p2b
+
+step 0
+step 1
+step 5
+
+EXAMPLE FOUR (wip)
+---
+new operator economy:
+	new Vertex x,y: 10
+	set Vertex xy: x,y
+	return;
+
+new Vertex a,b: 10
+new Edge ab: a,b

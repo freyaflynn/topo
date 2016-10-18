@@ -1,0 +1,43 @@
+.debug {
+	outline-color: red;
+	outline-width: 1px;
+	outline-style: solid;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+    	background-color: #222;
+	color: white;
+	font-family: monospace;
+}
+
+.contentarea {
+	left: 25%;
+	width: 50%;
+	position: relative;
+}
+
+.comment {
+	color: #888;
+}
+
+.function {
+	color: #99F;
+}
+
+.var {
+	color: #FA4;
+}
+
+.ifelse {
+	color: #F5A;
+}
+
+.return {
+	color: #FBF;
+}
+
+.quotes {
+	color: #CC5;
+}

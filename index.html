@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="topo.css">
+<script src="Topo.js"></script>
+</head>
+<body>
+<div class="contentarea">
+<h1> Topological Programming </h1>
+<a href="./about.html">About</a> <br>
+<textarea autofocus=true cols=60 rows=25 id="code"></textarea>
+<br>
+<button onclick="runCode()">Run Code</button>
+<button onclick="clearConsole()">Clear Console</button>
+<p id ="console">
+Try running this code in the HTML textArea!
+<br>
+<br>EXAMPLE ONE
+<br>---
+<br>new Operator take:
+<br>	return (v1+1),(v2-1);
+<br>
+<br>new Vertex a,b: 10
+<br>new Edge ab: a,b
+<br>
+<br>set Operator ab: take
+<br>
+<br>step 0
+<br>step 1
+<br>step 1
+<br>step 2
+<br>
+<br>EXAMPLE TWO
+<br>---
+<br>default ordering: seq
+<br>
+<br>new operator take:
+<br>	return (v1+1),(v2-1);
+<br>new operator takeHalf:
+<br>	return (v1+(v2/2)),(v2/2);
+<br>
+<br>new Vertex a,b,c: 10
+<br>new Edge ab: a,b
+<br>new Edge bc: b,c
+<br>new Edge ca: c,a
+<br>
+<br>set operator ab: take
+<br>set operator bc: takeHalf
+<br>set operator ca: take
+<br>set priority ab: 1
+<br>
+<br>step 0
+<br>step 1
+<br>step 1
+<br>step 1
+<br>step 1
+<br>step 1
+<br>step 45
+<br>step 1
+<br>step 1
+<br>step 1
+<br>step 1
+<br>step 1
+</p>
+</div>
+<br>
+</body>
+</html>
